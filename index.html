@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicaciones | JSONPlaceholder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">API · JSONPLACEHOLDER</span>
+      <h1>Explora las publicaciones</h1>
+      <p>Selecciona una tarjeta para conocer los datos del usuario que la publicó.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="section-heading">
+      <div>
+        <h2>Publicaciones</h2>
+        <p id="results-count">Cargando publicaciones...</p>
+      </div>
+      <button id="reload-button" class="reload-button" type="button">↻ Recargar</button>
+    </div>
+
+    <div id="status" class="status" role="status">Conectando con JSONPlaceholder...</div>
+    <section id="posts-container" class="posts-grid" aria-label="Lista de publicaciones"></section>
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="close-modal" class="close-button" type="button" aria-label="Cerrar ventana">×</button>
+      <div class="modal-icon" aria-hidden="true">👤</div>
+      <p class="modal-kicker">DETALLES DEL AUTOR</p>
+      <h2 id="modal-title">Información del usuario</h2>
+      <p id="modal-subtitle" class="modal-subtitle">Datos obtenidos desde la API</p>
+      <div id="user-details" class="user-details"></div>
+      <button id="done-button" class="done-button" type="button">Cerrar</button>
+    </section>
+  </div>
+
+  <footer>
+    <p>Actividad académica · Consumo de API REST con JavaScript</p>
+  </footer>
+</body>
+</html>
